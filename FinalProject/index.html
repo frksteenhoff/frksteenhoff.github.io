@@ -22,12 +22,13 @@
 				<!-- Adding and organizing all external scripts -->
 				<h1>Motor Vehicle Incident Data 	for NYC</h1>
 				<p>This page is created as the final part of the Exam Project in course 02806 - Social Data Analysis and Visualization, spring semester 2017. The data used for visualization is gathered from <a href="http://opendata.cityofnewyork.us//" target="_blank">New York City OpenData</a> and is used for learning purposes working with data driven visualizations in D3.</p>
-				<p>The focus of this website is on visualization techniques using d3. The material used for the visualizations include summary statistics and machine learning methods. For more on this, see the bottom of this page.</p>
+				<p>The focus of this website is on visualization techniques using d3. The material used for the visualizations include summary statistics and machine learning methods. For more on the work behind the visualizations and references, see the bottom of this page.</p>
 
 				<h2>What is this all about?</h2>
-				<p>Description of the website content</p>
-				<p>Description of dataset</p>
-				<br></br>
+				<p>We have chosen to dig into one of the datasets publicly available from NYC OpenData. This specific dataset contains information about the motor vehicle collisions in New York City. The dataset contains information about traffic accidents from 2012-2017. For both 2012 and 2017, several months are missing, thus, this data is excluded from some of the plotting and analysis. In this range of years there are, a total of 1.007.310 observations. Among the different features of each observation, one can find information on where the accident happened as geo-locations, the parties involved in the acciden, cause of the accident (contributing factors to), people injured, time of day etc.</p>
+
+				<p>With the visualization on this website, we will try and give the reader an understanding of how the traffic accidents are spread across NYC, the severity of the accidents, contributing factors to the accidents and through machine learning we will try to predict the reason for a given accident and try and see if the data seem to cluster in a specific way. In order to do this, we start out by visualizing a variety of different summary statistics followed by some more advanced data analysis using machine learning.</p>
+				<p></p>
 			</div>
 		</div>
 
@@ -36,6 +37,8 @@
   		<div class="container">
 			<div class="transbox">
 				<h1>Vehicle in collision and contributing factors</h1>
+				<p>Below is plotted the total sum of all accidents per vehicle type for the range of the entire dataset. As can be seen fromt the plot, the vehicle type most commonly involved in traffic accidents is the passenger vehicle.</p>
+
 				<button type="button_small" id=stats_toggle><p3>Toggle: primary vehicle/contributing factors</p3></button>
 				<br></br>
 
@@ -43,6 +46,22 @@
 				<center><div id="primary_vehicle"></div></center>
 
 				<p>For the purpose of this assignment, we have chosen not to include all the accidents without an indication of which borough or for what reason the accident happened. This is discussed further in the <a href="http://nbviewer.jupyter.org/github/frksteenhoff/02806_SDA/blob/master/02806_FinalProject-ExplainerNotebook.ipynb" target="_blank">Notebook.</a></p>
+				<br></br>
+			</div>
+		</div>
+
+
+		<!-- Number of accidents per borough -->
+  		<div class="container">
+			<div class="transbox">
+				<h1>Accidents per hour of day</h1>
+
+				<button type="button_small" id=year_toggle><p3>Click here for next borough</p3></button>
+				<br></br>
+
+				<!-- The incident data to visualize -->
+				<center><div id="acc_all"></div></center>
+				<p>Will be exchanged with accidents per hour, toggle between each borough.</p>
 				<br></br>
 			</div>
 		</div>
@@ -86,20 +105,6 @@
 			</div>
 		</div>
 
-		<!-- Number of accidents per borough -->
-  		<div class="container">
-			<div class="transbox">
-				<h1>Accidents per hour of day</h1>
-
-				<button type="button_small" id=year_toggle><p3>Click here for next borough</p3></button>
-				<br></br>
-
-				<!-- The incident data to visualize -->
-				<center><div id="acc_all"></div></center>
-				<p>Will be exchanged with accidents per hour, toggle between each borough.</p>
-				<br></br>
-			</div>
-		</div>
 
 		<!-- Some other machine learning model -->
   		<div class="container">
