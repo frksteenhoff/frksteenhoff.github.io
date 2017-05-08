@@ -246,8 +246,8 @@ button#year_toggle,
     display: inline-block; 
     padding-left: 20px;   /* Padding left/right between buttons */
     padding-right: 20px;  
-    padding-bottom: 50px; /* Padding after and before buttons */
-    padding-top: 50px;
+    padding-bottom: 20px; /* Padding after and before buttons */
+    padding-top: 20px;
 
 }
 
