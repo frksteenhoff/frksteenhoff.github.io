@@ -11,10 +11,10 @@ var max_all = 0,
     vehicleDataInUse = true, // What data is in use
     labels_iu,               // labels currently in use 
     values_iu;               // values currently in use
-/* Margin and padding */
-var margin = {top: 20, right: 50, bottom: 200, left: 50},
-w          = 960 - margin.left - margin.right,
-h          = 500 - margin.top - margin.bottom;
+	/* Margin and padding */
+	var margin = {top: 20, right: 50, bottom: 200, left: 50},
+	w          = 960 - margin.left - margin.right,
+	h          = 500 - margin.top - margin.bottom;
 
 /* Primary vehicle in collision data */
 d3.json("data/primary_vehicle.json", function(data) {
@@ -68,8 +68,7 @@ var yAxis = d3.svg.axis()
 
 // Define the div for the tooltip
 var div = d3.select("rect")	
-    .attr("a", "data-tooltip")				
-    .style("opacity", 0);
+    .attr("a", "data-tooltip");
 
 //Create SVG element
 var svg = d3.select("#primary_vehicle")
@@ -165,7 +164,7 @@ d3.select("#stats_toggle")
 		labels_iu = vehicle;
 		values_iu = vehicle_values;
 		max_value = maxAccidents;
-		titleText = "Primary vehicle in collision"
+		titleText = "Primary vehicle in collision	"
 		vehicleDataInUse = true;
 	}
 
