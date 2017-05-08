@@ -48,24 +48,25 @@
 		</div>
 		
 		<!-- Geo-plotting -->
-  		<div class="container">
-			<div class="transbox">
-				<h1>Geo-plotting</h1>
-				<p>Accidents per borough of a certain kind? Possibly Driver Inattention in 2016</p>
-				<p>Each borough in a different colour.</p>
-
-				<center><div id="geo"></div></center>
-				<br></br>
-			</div>
-		</div>
-
-
 		<!-- K means data -->
   		<div class="container">
 			<div class="transbox">
-				<h1>K-means</h1>
-				<p>Missing description</p>
-				<p>Missing script</p>
+				<h1>K-means clustering</h1>
+				<!-- The shapefile + clustering to visualize -->
+				<center><div id="geo"></div></center>
+
+				<!-- Buttons for toggling between different number of clusters -->
+				<p><strong>Choose year for k-means visualization</strong><p>
+				<div id='buttons'>
+					<ul>
+						<li><button class="buttonk" onclick="updateData(2013)"><p2>2013</p2></button></li>
+						<li><button class="buttonk" onclick="updateData(2014)"><p2>2014</p2></button></li>
+						<li><button class="buttonk" onclick="updateData(2015)"><p2>2015</p2></button></li>
+						<li><button class="buttonk" onclick="updateData(2016)"><p2>2016</p2></button>
+					</ul>
+				</div>
+				<p>Description of clustering.</p>
+				<br></br>
 			</div>
 		</div>
 

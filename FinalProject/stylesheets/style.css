@@ -65,7 +65,7 @@ a:hover:not(.active) {
     text-decoration: none;
 }
 
-p_ {
+p_ {  
   font-size: 20px;
   color: #9c9c9c;
   padding-left: 40px;
@@ -149,7 +149,7 @@ div.transbox h2 {
 
 div.transbox h1 {
     padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 div.transbox h2 {
@@ -202,7 +202,7 @@ div.jumbotron.img {
 }
 
 /* Button and SVG element styling */
-
+.buttonk,
 button#stats_toggle,
 button#year_toggle,
 .button_small {
@@ -229,6 +229,14 @@ button#year_toggle,
     filter: alpha(opacity=90); /* For IE8 and earlier */
 }
 
+.buttonk {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
 #buttons {
     font-size: 16px;
     text-align: center;
@@ -243,6 +251,7 @@ button#year_toggle,
 
 }
 
+buttonk:hover,
 button#stats_toggle:hover
 button#year_toggle:hover,
 button:hover {
@@ -370,4 +379,25 @@ button:hover {
   -webkit-transform: translateY(-12px);
   -moz-transform:    translateY(-12px);
   transform:         translateY(-12px); 
+}
+
+/* Decision tree styling */
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
 }

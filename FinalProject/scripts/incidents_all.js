@@ -1,4 +1,6 @@
+// ------------------------------------------------------------------------ //
 // Global variables
+// ------------------------------------------------------------------------ //
 var max_all = 0,  // all time max num of accidents
     titleTxt = "Accidents per borough, NYC, ",
     borough = ["BRONX", "BROOKLYN", "MANHATTAN", "QUEENS", "STATEN ISLAND"],
@@ -11,9 +13,11 @@ var max_all = 0,  // all time max num of accidents
 var bar_dataset;  // Initializing dataset
 var numOfBoroughs, boroughNames, boroughValues;
 
-// Reading in json data - accidents per year per borough
+// ------------------------------------------------------------------------ //
+// Reading in json shapefile - accidents per year per borough
+// ------------------------------------------------------------------------ //
 d3.json("data/year_data.json", function(data) {
-		bar_dataset = data;
+	bar_dataset = data;
 
 	/* Find largest values within all years */
 	for (var i = 0; i < years_of_interest.length; i++) {
@@ -113,7 +117,9 @@ svg.append("text")
 	.text(titleTxt + year)
 	.style("font-size", "16px");
 
+// ------------------------------------------------------------------------ //
 /* On click event: change year */
+// ------------------------------------------------------------------------ //
 d3.select("#year_toggle")
 	.on("click", function() {
 	// new bar_dataset values - meant to loop through values 2013 - 2016
