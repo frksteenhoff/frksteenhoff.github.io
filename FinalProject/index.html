@@ -12,22 +12,24 @@
   		<script src="http://d3js.org/topojson.v1.min.js"></script>
 		<title>02806 - Final Exam Project</title>
 	</head>
+
 	<div id="container">
 		<!-- Landing page image -->
 		<img id="top" src="images/Traffic_L.jpg" align="center" height="110%" width="100%"> 
-		<div class="transbox"> 
-  			<h1 id="text-top">New York City Traffic Data</h1>
-			<!-- Adding and organizing all external scripts -->
-			<h1>Motor Vehicle Incident Data 	for NYC</h1>
-			<p>This page is created as the final part of the Exam Project in course 02806 - Social Data Analysis and Visualization, spring semester 2017. The data used for visualization is gathered from <a href="http://opendata.cityofnewyork.us//" target="_blank">New York City OpenData</a> and is used for learning purposes working with data driven visualizations in D3.</p>
-			<p>The focus of this website is on visualization techniques using d3. The material used for the visualizations include summary statistics and machine learning methods. For more on this, see the bottom of this page.</p>
+  		<h1 id="text-top">New York City Traffic Data</h1>
+		<div class="container">
+			<div class="transbox"> 
+				<!-- Adding and organizing all external scripts -->
+				<h1>Motor Vehicle Incident Data 	for NYC</h1>
+				<p>This page is created as the final part of the Exam Project in course 02806 - Social Data Analysis and Visualization, spring semester 2017. The data used for visualization is gathered from <a href="http://opendata.cityofnewyork.us//" target="_blank">New York City OpenData</a> and is used for learning purposes working with data driven visualizations in D3.</p>
+				<p>The focus of this website is on visualization techniques using d3. The material used for the visualizations include summary statistics and machine learning methods. For more on this, see the bottom of this page.</p>
 
-			<h2>What is this all about?</h2>
-			<p>Description of the website content</p>
-			<p>Description of dataset</p>
-			<br></br>
+				<h2>What is this all about?</h2>
+				<p>Description of the website content</p>
+				<p>Description of dataset</p>
+				<br></br>
+			</div>
 		</div>
-	</div>
 
 
 		<!-- Accident types -->
@@ -39,6 +41,7 @@
 
 				<!-- The data to visualize -->
 				<center><div id="primary_vehicle"></div></center>
+
 				<p>For the purpose of this assignment, we have chosen not to include all the accidents without an indication of which borough or for what reason the accident happened. This is discussed further in the <a href="http://nbviewer.jupyter.org/github/frksteenhoff/02806_SDA/blob/master/02806_FinalProject-ExplainerNotebook.ipynb" target="_blank">Notebook.</a></p>
 				<br></br>
 			</div>
@@ -50,6 +53,7 @@
 				<h1>Geo-plotting</h1>
 				<p>Accidents per borough of a certain kind? Possibly Driver Inattention in 2016</p>
 				<p>Each borough in a different colour.</p>
+
 				<center><div id="geo"></div></center>
 				<br></br>
 			</div>
@@ -61,17 +65,20 @@
 			<div class="transbox">
 				<h1>K-means</h1>
 				<p>Missing description</p>
+				<p>Missing script</p>
 			</div>
 		</div>
 
 		<!-- NEW YORK CITY MAP-->
-		<img id="top" src="images/nyc_map.png" align="center" height="642" width="1931">  	
+		<!--<img id="top" src="images/nyc_map.png" align="center" height="642" width="1931"> --> 	
 
 		<!-- Some other machine learning model -->
   		<div class="container">
 			<div class="transbox">
 				<h1>Decision Tree</h1>
 				<p>Predicting the vehicle involved in the accident based on location of accident -- can we find a pattern?</p>
+				<p>Missing visualization</p>
+				<p>Missing script</p>
 			</div>
 		</div>
 
@@ -79,6 +86,7 @@
   		<div class="container">
 			<div class="transbox">
 				<h1>Accidents per borough 2013-2016</h1>
+
 				<button type="button_small" id=year_toggle><p3>Click here for next year</p3></button>
 				<br></br>
 
@@ -110,12 +118,6 @@
 		</div>
 	</div>
 
-<!---	<div class="site-footer">
-		<div class="content_left"></div>
-		<div class="content_middle"></div>
-		<div class="content_right"></div>
-	</div>
--->
 	</body>
 	<!-- SCRIPTS -->
 	<script type="text/javascript" src="scripts/incidents_all.js"></script>
