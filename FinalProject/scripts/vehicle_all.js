@@ -12,7 +12,7 @@ var max_all = 0,
     labels_iu,               // labels currently in use 
     values_iu;               // values currently in use
 	/* Margin and padding */
-	var margin = {top: 20, right: 50, bottom: 200, left: 100},
+	var margin = {top: 20, right: 50, bottom: 200, left: 150},
 	w          = 960 - margin.left - margin.right,
 	h          = 500 - margin.top - margin.bottom;
 
@@ -225,7 +225,7 @@ d3.select("#stats_toggle")
 			   .attr("x", xPosition)
 			   .attr("y", yPosition)
 			   .attr("font-family", "sans-serif")
-			   .attr("font-size", "14px")
+			   .attr("font-size", "12px")
 			   .attr("font-weight", "bold")
 			   .attr("fill", "black")
 			   .attr("background", "rgba(255,255,255,0.5)")

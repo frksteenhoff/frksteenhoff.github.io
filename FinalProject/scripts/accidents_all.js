@@ -51,7 +51,15 @@ svg.selectAll("rect")
    		return xScale_small2(d);
    })
    .attr("width", xScale_small2.rangeBand())
-   .attr("fill", "darkblue");
+   .attr("fill", "darkblue")
+   .on("mouseover", function(d) {
+		d3.select(this)
+			.attr("fill", "orange")
+   })
+   .on("mouseout", function(d) {
+   		d3.select(this)
+    		.attr("fill", "darkblue");
+	})
 
 // Set bar height
 svg.selectAll("rect")
@@ -62,28 +70,10 @@ svg.selectAll("rect")
    .attr("height", function(d) {
    		return hh - yScale_small2(d); /* number of accidents */
    })
-
-   .on("mouseover", function(d) {
-		//Create the tooltip label
-		d3.select(this)
-			.attr("fill", "orange")
-		svg.append("text")
-		   .attr("id", "tooltip")
-		   .attr("x", -100)
-		   .attr("y", ww-30)
-		   .attr("font-family", "sans-serif")
-		   .attr("font-size", "12px")
-		   .attr("font-weight", "bold")
-		   .attr("fill", "black")
-		   .attr("background", "rgba(255,255,255,0.5)")
-		   .text("No of accidents: " + d3.format(",.0")(d));
+   .append("title")
+   .text(function(d){
+   		return "Number of accidents: " + d3.format(",.0")(d);
    })
-   .on("mouseout", function(d) {
-   		d3.select(this)
-    		.attr("fill", "darkblue");
-		//Remove the tooltip
-		d3.select("#tooltip").remove();
-	})
 
 //Create X axis
 svg.append("g")
@@ -108,4 +98,3 @@ svg.append("text")
 	.attr("transform", "translate("+ (ww / 5) +","+ (marginn.left-110) +")")
 	.text("Accidents per year")
 	.style("font-size", "20px");
-

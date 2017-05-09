@@ -37,7 +37,7 @@ var svg = d3.select("#deaths_all")
 			.append("svg")
 			.attr("width", w2 + margin2.left + margin2.right)
 			.attr("height", h2 + margin2.top + margin2.bottom)
-			.attr("float", "left-110")
+			.attr("float", "left")
 			.append("g")
 			.attr("transform",
 				  "translate(" + margin2.left + "," + margin2.top + ")");
@@ -51,7 +51,15 @@ svg.selectAll("rect")
    		return xScale_small(d);
    })
    .attr("width", xScale_small.rangeBand())
-   .attr("fill", "darkred");
+   .attr("fill", "darkred")
+   .on("mouseover", function(d) {
+		d3.select(this)
+			.attr("fill", "orange")
+   })
+   .on("mouseout", function(d) {
+   		d3.select(this)
+    		.attr("fill", "darkred");
+	});
 
 // Set bar height
 svg.selectAll("rect")
@@ -62,28 +70,11 @@ svg.selectAll("rect")
    .attr("height", function(d) {
    		return h2 - yScale_small(d); /* number of accidents */
    })
+   .append("title")
+   .text(function(d) {
+   		return "Number of fatalities: " + d3.format(",.0")(d);
+   	});
 
-   .on("mouseover", function(d) {
-		//Create the tooltip label
-		d3.select(this)
-			.attr("fill", "orange")
-		svg.append("text")
-		   .attr("id", "tooltip")
-		   .attr("x", h2)
-		   .attr("y", w2)
-		   .attr("font-family", "sans-serif")
-		   .attr("font-size", "12px")
-		   .attr("font-weight", "bold")
-		   .attr("fill", "black")
-		   .attr("background", "rgba(255,255,255,0.5)")
-		   .text("No of fatalities: " + d3.format(",.0")(d));
-   })
-   .on("mouseout", function(d) {
-   		d3.select(this)
-    		.attr("fill", "darkred");
-		//Remove the tooltip
-		d3.select("#tooltip").remove();
-	})
 
 //Create X axis
 svg.append("g")

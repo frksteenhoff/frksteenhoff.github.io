@@ -1,6 +1,6 @@
-var margin1 = {top: 20, right: 120, bottom: 20, left: 180},
+var margin1 = {top: 20, right: 120, bottom: 20, left: 220},
     wi = 1100 - margin1.right - margin1.left,
-    he = 60 0 - margin1.top - margin1.bottom;
+    he = 600 - margin1.top - margin1.bottom;
 
 var i = 0,
     duration = 750,

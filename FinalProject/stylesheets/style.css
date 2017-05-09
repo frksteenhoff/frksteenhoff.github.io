@@ -38,7 +38,8 @@ body {
   position: absolute;
   font-size: 20px;
   color: black;
-  left: 60px;
+  left: 400px;
+  float: center;
 }
 
 /* General list element settings */

@@ -37,16 +37,18 @@
 			<div class="transbox">
 				<h1>Getting to know the New York City traffic data</h1>
 				<h2>Vehicle in collision and contributing factors</h2>
-				<p>Below is plotted the total sum of all accidents per vehicle type for the range of the entire dataset. As can be seen fromt the plot, the vehicle type most commonly involved in traffic accidents is the passenger vehicle.</p>
-				<p>It is without a doubt "Driver inattention/Distraction" that is the most common contributing factor in collisions in New York. As can be seen in the plot above, more than 25% of all accidents are due to driver inattention.. And the second most common reason is drowziness -- sure doesn't seem like the city that never sleeps!</p>
+				<p>Below is plotted the total sum of all accidents per vehicle type for the range of the entire dataset. As can be seen fromt the plot, the vehicle type most commonly involved in traffic accidents is the passenger vehicle, folowed by the sport/utility wagon. The remaining vehicle types account for only a little percentage of the vehicles. </p>
 
-				<button type="button_small" id=	_toggle><p3>Toggle: primary vehicle/contributing factors</p3></button>
+				<p>Pushing the button above the plot will change plot of contributing factors to traffic accidents. "Driver inattention/Distraction" is the most common contributing factor to collisions in New York. As can be seen in the plot, more than 25% of all accidents are due to driver inattention. And the second most common reason is drowziness -- sure doesn't seem like the city that never sleeps!</p>
+				<p></p>
+				<button type="button_small" id=stats_toggle><p3>Toggle: primary vehicle/contributing factors</p3></button>
 				<br></br>
 
 				<!-- The data to visualize -->
 				<center><div id="primary_vehicle"></div></center>
 
 				<p>For the purpose of this assignment, we have chosen not to include all the accidents without an indication of which borough or for what reason the accident happened. This is discussed further in the <a href="http://nbviewer.jupyter.org/github/frksteenhoff/02806_SDA/blob/master/02806_FinalProject-ExplainerNotebook.ipynb" target="_blank">Notebook.</a></p>
+				<p></p>
 				<p></p>
 			</div>
 		</div>
@@ -56,18 +58,25 @@
   		<div class="container">
 			<div class="transbox">
 				<h2>Vehicle collisions over time</h2>
-				<p>Underneath is plotted the number of accidents per borough per year in monthly intervals. Choosing to plot the accidents per month is because of the large amount of data. Plotting data for longer ranges of time at the same time would make the visualizations very hard to read. 
+				<p>Underneath is plotted the number of accidents per borough per year in monthly intervals. Choosing to plot the accidents per month is because of the large amount of data. Plotting data for longer ranges of time at the same time would make the visualizations very hard to read. The plots are visualized as heat-maps. An accident is a red dot. The higher the intensity of accidents is at a specific location the more yellow the area gets. 
+				<p>For some of the months it's as if it is possible to make out some of the grids that make up the roads/streets for some of the boroughs and for the very square Manhattan area.</p>
 				<br></br>
-				<h2 id="text-on-geo">2012, July	</h1>
-				<center><img id="img" src="images/geo/geo12_7.png" height="700" width="1400" title="Accidents per month for each year in dataset" /></center>
+					<h2 id="text-on-geo">2012, July	</h2>
+					<center><img id="img" src="images/geo/geo12_7.png" height="600" width="1200" title="Accidents per month for each year in dataset" /></center>
 				<br></br>
-				<p>Overall, the number of accidents have not decreased, actually there are more accidents in 2016, than in 2013, as can be seen from the plot below. What is interesting, is the number of people injured in accidents. This number has decreased steadily since 2013 significantly. If we look into the data (rightmost figure below), the number of accidents per year year </p>
+				<p>Looking at the geodata, we can see that the areas most commonly exposed to traffic accidents are Midtown (around Times Square),  East Village and Lower Manhattan along with Brooklyn Heights and around Flushing Meadows Corona Park. Which in fact changes the picture of where there are most accidents. From looking solely at the number of accidents in each borough (which is only plotted in the <a href="http://nbviewer.jupyter.org/github/frksteenhoff/02806_SDA/blob/master/02806_FinalProject-ExplainerNotebook.ipynb" target="_blank">Notebook</a>), we had a lot of missing data leading to Brooklyn and Queens looking as though they were the twwo boroughs most commonly eposed to traffic accidents. From these plots however, it seems as though a lot of the missing data belongs to Manhattan, which can also be seen from the heatmap that clearly shows Manhattan as the area most exposed to traffic accidents!
+				Is this because it would be better (imagewise) for NYC that one of the lesser visited boroughs had the highest number of crimes?</p>
+
+				<p>Looking at the plots for 2016, somehow, we get the feeling that in August and September there are less traffic accidents, but this is wrong, actually, there are just as many but for both months more than 84% of the traffic accidents are not properly reported -- at least all the geodata info is missing! </p>
+
 				<br></br>
 				<center>
 					<div id="deaths_all"></div>					
 				</center>
+				<p>It is hard to get a good overview of exactly how the traffic scene have developed from 2013-2016, this is better visualized by the two plots below showing the fatalities for each years and the total number of accidents.</p>
 
-				<p> From this we can see that even though the number of accidents have risen the last years, the number of fatalities have fallen. No matter what that is an improvement!</p>
+				<p>Overall, the number of accidents have not decreased, actually there are more accidents in 2016, than in 2013, as can be seen from the plot below. What is interesting, is the number of people injured in accidents. This number has decreased steadily since 2013. This might be due to the increased focus on traffic accidents in New York and the <a href="http://www1.nyc.gov/site/visionzero/index.page" target="_blank">Vision Zero project</a>, that has set a goal to reach 0 fatalities as an effect of traffic accidents.</p>
+
 				<p></p>
 			</div>
 		</div>
@@ -84,7 +93,7 @@
 
 				<!-- The incident data to visualize -->
 				<center><div id="acc_all"></div></center>
-				<p>Overall, there seems to be a pattern! For most of the boroughs, </p>
+				<p>Overall, there seems to be a pattern! For most of the boroughs, the hours from 8-9AM and again around 2PM and 4PM. This matches the time when people head for work, have lunch and leave work. However this peak is not found on Manhattan. Here is something that could be fun to look into.</p>
 				<br></br>
 			</div>
 		</div>
@@ -170,6 +179,6 @@
 	<script type="text/javascript" src="scripts/image_display.js"></script>
 	<script type="text/javascript" src="scripts/accidents_all.js"></script>
 	<script type="text/javascript" src="scripts/deaths_all.js"></script>
-	<script type="text/javascript" src="scripts/geo_nyc.js"></script>
-	<!--<script type="text/javascript" src="scripts/tree_visualization.js"></script>-->
+	<!--<script type="text/javascript" src="scripts/geo_nyc.js"></script>-->
+	<script type="text/javascript" src="scripts/tree_visualization.js"></script>
 </html>
