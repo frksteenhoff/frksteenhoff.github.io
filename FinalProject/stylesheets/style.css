@@ -33,6 +33,14 @@ body {
     padding-bottom: 5px;
 }
 
+#text-on-geo {
+  z-index:100;
+  position: absolute;
+  font-size: 20px;
+  color: black;
+  left: 60px;
+}
+
 /* General list element settings */
 ul {
     list-style-type: none;

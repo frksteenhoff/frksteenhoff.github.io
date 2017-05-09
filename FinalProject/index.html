@@ -1,6 +1,6 @@
 <html>
 <!--<body background="images/back2.png">-->
-<body>
+<body onload="startTimer()">
 	<head>
 		<meta charset="utf-8">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -20,7 +20,7 @@
 		<div class="container">
 			<div class="transbox"> 
 				<!-- Adding and organizing all external scripts -->
-				<h1>Motor Vehicle Incident Data 	for NYC</h1>
+				<h1>Motor Vehicle Incident Data in NYC</h1>
 				<p>This page is created as the final part of the Exam Project in course 02806 - Social Data Analysis and Visualization, spring semester 2017. The data used for visualization is gathered from <a href="http://opendata.cityofnewyork.us//" target="_blank">New York City OpenData</a> and is used for learning purposes working with data driven visualizations in D3.</p>
 				<p>The focus of this website is on visualization techniques using d3. The material used for the visualizations include summary statistics and machine learning methods. For more on the work behind the visualizations and references, see the bottom of this page.</p>
 
@@ -32,12 +32,13 @@
 			</div>
 		</div>
 
-
-		<!-- Accident types -->
+		<!-- Showing accidents plotted on heatmap -->
   		<div class="container">
 			<div class="transbox">
-				<h1>Vehicle in collision and contributing factors</h1>
+				<h1>Getting to know the New York City traffic data</h1>
+				<h2>Vehicle in collision and contributing factors</h2>
 				<p>Below is plotted the total sum of all accidents per vehicle type for the range of the entire dataset. As can be seen fromt the plot, the vehicle type most commonly involved in traffic accidents is the passenger vehicle.</p>
+				<p>It is without a doubt "Driver inattention/Distraction" that is the most common contributing factor in collisions in New York. As can be seen in the plot above, more than 25% of all accidents are due to driver inattention.. And the second most common reason is drowziness -- sure doesn't seem like the city that never sleeps!</p>
 
 				<button type="button_small" id=stats_toggle><p3>Toggle: primary vehicle/contributing factors</p3></button>
 				<br></br>
@@ -46,7 +47,30 @@
 				<center><div id="primary_vehicle"></div></center>
 
 				<p>For the purpose of this assignment, we have chosen not to include all the accidents without an indication of which borough or for what reason the accident happened. This is discussed further in the <a href="http://nbviewer.jupyter.org/github/frksteenhoff/02806_SDA/blob/master/02806_FinalProject-ExplainerNotebook.ipynb" target="_blank">Notebook.</a></p>
+				<p></p>
+			</div>
+		</div>
+		
+
+		<!-- Accident types -->
+  		<div class="container">
+			<div class="transbox">
+				<h2>Vehicle collisions over time</h2>
+				<p>Underneath is plotted the number of accidents per borough per year in monthly intervals. Choosing to plot the accidents per month is because of the large amount of data. Plotting data for longer ranges of time at the same time would make the visualizations very hard to read. 
 				<br></br>
+				<h2 id="text-on-geo">2012, July	</h1>
+				<center><img id="img" src="images/geo/geo12_7.png" height="700" width="1400" title="Accidents per month for each year in dataset" /></center>
+				<br></br>
+				<p>Overall, the number of accidents have not decreased, actually there are more accidents in 2016, than in 2013, as can be seen from the plot below. What is interesting, is the number of people injured in accidents. This number has decreased steadily since 2013 significantly. If we look into the data (rightmost figure below), the number of accidents per year year </p>
+				<br></br>
+				<center>
+				<div position:relative; float:left>
+					<div id="deaths_all"></div>	
+				</div>
+				<div position:relative; float:right>
+					<div id="accidents_all"></div>				
+				</div>
+				</center>
 			</div>
 		</div>
 
@@ -54,14 +78,15 @@
 		<!-- Number of accidents per borough -->
   		<div class="container">
 			<div class="transbox">
-				<h1>Accidents per hour of day</h1>
+				<h2>Accidents per hour of day</h2>
+				<p>Now we have looked at the accidents overall foor each month per year, but what about the different times of the day? How does this look and might there be any patterns related to the time of day? Below is a graph showing the number of accidents for each hour of the day for each borough -- see the next borough by clicking the button.</p>
 
 				<button type="button_small" id=year_toggle><p3>Click here for next borough</p3></button>
 				<br></br>
 
 				<!-- The incident data to visualize -->
 				<center><div id="acc_all"></div></center>
-				<p>Will be exchanged with accidents per hour, toggle between each borough.</p>
+				<p>Overall, there seems to be a pattern! For most of the boroughs, </p>
 				<br></br>
 			</div>
 		</div>
@@ -70,7 +95,7 @@
 		<!-- K means data -->
   		<div class="container">
 			<div class="transbox">
-				<h1>K-means clustering</h1>
+				<h2>K-means clustering</h2>
 				<!-- The shapefile + clustering to visualize -->
 				<center><div id="geo"></div></center>
 
@@ -98,14 +123,13 @@
 		<!-- Some other machine learning model -->
   		<div class="container">
 			<div class="transbox">
-				<h1>Decision Tree</h1>
+				<h2>Decision Tree</h2>
 				<p>Predicting the vehicle involved in the accident based on location of accident -- can we find a pattern?</p>
 
 				<!-- The decision tree to visualize -->
 				<center><div id="tree"></div></center>
 
-				<p>Missing visualization</p>
-				<p>Missing script</p>
+				<p>Missing description</p>
 			</div>
 		</div>
 
@@ -113,7 +137,7 @@
 		<!-- Some other machine learning model -->
   		<div class="container">
 			<div class="transbox">
-				<h1>Summary</h1>
+				<h2>What have we learned?</h2>
 				<p>Adding some final comments to the work on this webpage.</p>
 			</div>
 		</div>
@@ -146,5 +170,8 @@
 	<script type="text/javascript" src="scripts/acc_per_hour.js"></script>
 	<script type="text/javascript" src="scripts/vehicle_all.js"></script>
 	<!--<script type="text/javascript" src="scripts/geo_nyc.js"></script>-->
+	<script type="text/javascript" src="scripts/image_display.js"></script>
 	<script type="text/javascript" src="scripts/tree_visualization.js"></script>
+	<script type="text/javascript" src="scripts/accidents_all.js"></script>
+	<script type="text/javascript" src="scripts/deaths_all.js"></script>
 </html>

@@ -12,7 +12,7 @@ var max_all = 0,
     labels_iu,               // labels currently in use 
     values_iu;               // values currently in use
 	/* Margin and padding */
-	var margin = {top: 20, right: 50, bottom: 200, left: 50},
+	var margin = {top: 20, right: 50, bottom: 200, left: 100},
 	w          = 960 - margin.left - margin.right,
 	h          = 500 - margin.top - margin.bottom;
 
@@ -134,7 +134,8 @@ svg.append("g")
 	.style("text-anchor", "end")
 		.attr("dx", "-1.0em")
 		.attr("dy", "-.55em")
-		.attr("transform", "rotate(-90)" ); /* Setting x axis position, vertical */
+		.attr("font-size", "12px")
+		.attr("transform", "rotate(-45)" ); /* Setting x axis position, vertical */
 
 //Create Y axis
 svg.append("g")
@@ -144,7 +145,7 @@ svg.append("g")
 // Add plot title
 svg.append("text")
 	.attr("class", "xy axis")
-	.attr("transform", "translate("+ (w / 3) +","+ (margin.left-55) +")")
+	.attr("transform", "translate("+ (w / 3) +","+ (margin.left-75) +")")
 	.text(titleText)
 	.style("font-size", "20px");
 
@@ -224,7 +225,7 @@ d3.select("#stats_toggle")
 			   .attr("x", xPosition)
 			   .attr("y", yPosition)
 			   .attr("font-family", "sans-serif")
-			   .attr("font-size", "12px")
+			   .attr("font-size", "14px")
 			   .attr("font-weight", "bold")
 			   .attr("fill", "black")
 			   .attr("background", "rgba(255,255,255,0.5)")
@@ -246,7 +247,8 @@ d3.select("#stats_toggle")
 		.style("text-anchor", "end")
 			.attr("dx", "-1.0em")
 			.attr("dy", "-.55em")
-			.attr("transform", "rotate(-90)" ); /* Setting x axis position, vertical */
+			.attr("font-size", "12px")
+			.attr("transform", "rotate(-45)" ); /* Setting x axis position, vertical */
 
 	//Create Y axis
 	svg.append("g")
@@ -256,7 +258,7 @@ d3.select("#stats_toggle")
 	// Add plot title
 	svg.append("text")
 		.attr("class", "xy axis")
-		.attr("transform", "translate("+ (w / 4) +","+ (margin.left-55) +")")
+		.attr("transform", "translate("+ (w / 4) +","+ (margin.left-75) +")")
 		.text(titleText)
 		.style("font-size", "20px");
 		});
