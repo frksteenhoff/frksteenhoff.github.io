@@ -18,7 +18,7 @@
         images[k] = "images/geo/geo" + yearRange[i] + "_" + j + ".png";
         k += 1;
       }
-    }
+    } 
 
   images[k] = "images/geo/geo17_1.png";
   images[k+1] = "images/geo/geo17_2.png";

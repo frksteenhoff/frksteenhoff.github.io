@@ -12,7 +12,7 @@ var tree = d3.layout.tree()
 var diagonal = d3.svg.diagonal()
     .projection(function(d) { return [d.y, d.x]; });
 
-var svg = d3.select("#tree")
+var svg = d3.select("#tree_viz")
     .append("svg")
     .attr("width", wi + margin1.right + margin1.left)
     .attr("height", he + margin1.top + margin1.bottom)

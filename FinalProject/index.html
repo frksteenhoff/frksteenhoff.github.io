@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <!--<body background="images/back2.png">-->
 <body onload="startTimer()">
@@ -104,7 +105,7 @@
 			<div class="transbox">
 				<h2>K-means clustering</h2>
 				<!-- The shapefile + clustering to visualize -->
-				<center><div id="geo"></div></center>
+				<center><div id="clustering"></div></center>
 
 				<!-- Buttons for toggling between different number of clusters -->
 				<p><strong>Choose year for k-means visualization</strong><p>
@@ -127,14 +128,14 @@
 		<!-- NEW YORK CITY MAP-->
 		<!--<img id="top" src="images/nyc_map.png" align="center" height="642" width="1931"> --> 	
 
-		<!-- Some other machine learning model -->
+		<!-- Decision tree -->
   		<div class="container">
 			<div class="transbox">
 				<h2>Decision Tree</h2>
 				<p>Predicting the contributing factor behind the accidents by use of the time of day, day of the week, vehicle type, number of persons killed and the borough in which the accident occured.</p>
 
 				<!-- The decision tree to visualize -->
-				<center><div id="tree"></div></center>
+				<center><div id="tree_viz"></div></center>
 				<p>We decided to only predict on the 10 most common contributing factors of the accident to simplify the model. Furthermore we also decided to restrict the tree depth to 4, so that the model would be easier to visualze.</p>
 				<p>The model ended up with test score of 35.77 % and a training score of 35.52 %. The score is a measure of the accuracy of the model - specifically the percent of observations in the data subsets the model predicted correctly. Randomly predicting a feature would score around 10 % accuracy as we have 10 different targets to predict for.</p>
 			</div>

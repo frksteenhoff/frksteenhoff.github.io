@@ -19,15 +19,18 @@ var path = d3.geo.path()
               .projection(projection);
 
 // create svg element
-var svg = d3.select("#geo")
+var svg1 = d3.select("#clustering")
         .append("svg")
         .attr("width", width)
-        .attr("height", height);
+        .attr("height", height)
+        .append("g")
+        .attr("transform", "translate(" + 30 + "," + 20 + ")");
+
 
 // Load shapefile information
 d3.json("data/NYCshapefile.JSON", function(topo) {
     geo = topo.features;
-    svg.selectAll("path")
+    svg1.selectAll("path")
         .data(geo)
         .enter()
         .append("path")
@@ -67,18 +70,18 @@ function updateData(yearToVisualize) {
     }
 
     // Removing all previous text and datapoints when repainting
-    svg.selectAll("text").remove();
-    svg.selectAll("circle.data.points").remove();
+    svg1.selectAll("text").remove();
+    svg1.selectAll("circle.data.points").remove();
 
     // Add plot title
-    svg.append("text")
+    svg1.append("text")
         .attr("class", "xy axis")
         .attr("transform", "translate("+ (w / 3) +","+ 30 +")")
         .text("4 CLUSTERS, " + yearToVisualize)
         .style("font-size", "20px");
   
      // Drawing data on map
-     svg.selectAll("cluster_data")
+     svg1.selectAll("cluster_data")
         .data(data)
         .enter()
         .append("circle")
@@ -106,10 +109,10 @@ function updateData(yearToVisualize) {
       .style("opacity", 0.5);
 
      // Removing all previous centroids when repainting
-     svg.selectAll("circle.centroids").remove();
+     svg1.selectAll("circle.centroids").remove();
 
      // Drawing centroids w. stroke
-     svg.selectAll("k2centroids")
+     svg1.selectAll("k2centroids")
         .data(centroids)
         .enter()
         .append("circle")
