@@ -7,7 +7,7 @@ var margin2 = {top: 40, right: 50, bottom: 100, left: 100},
 	h2          = 400 - margin2.top - margin2.bottom;
 
 /* Variables needed in script */
-var maxAccidents = d3.max(accidents);
+var maxAcc = d3.max(accidents);
 
 /* Setting script values for bar chart */
 var xScale_small = d3.scale.ordinal()
@@ -15,7 +15,7 @@ var xScale_small = d3.scale.ordinal()
 				.rangeRoundBands([0, w2], 0.05);
 
 var yScale_small = d3.scale.linear()
-				.domain([0, maxAccidents])
+				.domain([0, maxAcc])
 				.range([h2, 0]);
 
 //Define X axis
@@ -37,6 +37,7 @@ var svg = d3.select("#deaths_all")
 			.append("svg")
 			.attr("width", w2 + margin2.left + margin2.right)
 			.attr("height", h2 + margin2.top + margin2.bottom)
+			.attr("float", "left-110")
 			.append("g")
 			.attr("transform",
 				  "translate(" + margin2.left + "," + margin2.top + ")");
@@ -68,7 +69,7 @@ svg.selectAll("rect")
 			.attr("fill", "orange")
 		svg.append("text")
 		   .attr("id", "tooltip")
-		   .attr("x", h2/2.3)
+		   .attr("x", -100)
 		   .attr("y", w2-30)
 		   .attr("font-family", "sans-serif")
 		   .attr("font-size", "12px")
