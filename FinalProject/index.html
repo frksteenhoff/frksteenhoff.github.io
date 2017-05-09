@@ -107,11 +107,10 @@
 						<li><button class="buttonk" onclick="updateData(2016)"><p2>2016</p2></button>
 					</ul>
 				</div>
-				<p>Description of clustering.</p>
-				<p>Number of neighbours</p>
-				<p>Trends for all years?</p>
-				<p>What can we use this for?</p>
-				<p> JONAS </p>
+
+				<p>Above is a visualization of every accident in may for the years 2013 through to 2016. The data has been clustered by K-means with 4 clusters. Once again we chose to include all the accidents despite of missing data values in some of the features. This does not have an influence on the clustering, as this is done solely by geolocation data.</p>
+				<p>From the clustering we see that the density of accidents seem distributed with roughly the same clusters in 2014 to 2016. But for 2013 a cluster center is located on Staten Island. This could mean two things. Either there are significantly more accidents in Staten Island than other years or there has been a significant increase in the number of accidents in the surrounding boroughs. From the visualization the first option seems to be the cause. The traffic accidents seem to be spread throughout Staten Island compared to the following years.</p>
+				<p>What this change from 2013 to 2014 could indicate is that the road system has had a significant overhaul thus reducing the number of 'dangerous' road segments or maybe that simply less collisions have been reported. Either way a changed has occured that has reduced the number of traffic accidents reported in Staten Island </p>
 				<br></br>
 			</div>
 		</div>
@@ -122,14 +121,13 @@
 		<!-- Some other machine learning model -->
   		<div class="container">
 			<div class="transbox">
-				<h2>Decision Tree</h2>
-				<p>Predicting the vehicle involved in the accident based on location of accident -- can we find a pattern?</p>
+				<h1>Decision Tree</h1>
+				<p>Predicting the contributing factor behind the accidents by use of the time of day, day of the week, vehicle type, number of persons killed and the borough in which the accident occured.</p>
 
 				<!-- The decision tree to visualize -->
 				<center><div id="tree"></div></center>
-
-				<p>Missing description</p>
-				<p>JONAS</p>
+				<p>We decided to only predict on the 10 most common contributing factors of the accident to simplify the model. Furthermore we also decided to restrict the tree depth to 4, so that the model would be easier to visualze.</p>
+				<p>The model ended up with test score of 35.77 % and a training score of 35.52 %. The score is a measure of the accuracy of the model - specifically the percent of observations in the data subsets the model predicted correctly. Randomly predicting a feature would score around 10 % accuracy as we have 10 different targets to predict for.</p>
 			</div>
 		</div>
 
@@ -169,9 +167,9 @@
 	<!-- SCRIPTS -->
 	<script type="text/javascript" src="scripts/acc_per_hour.js"></script>
 	<script type="text/javascript" src="scripts/vehicle_all.js"></script>
-	<!--<script type="text/javascript" src="scripts/geo_nyc.js"></script>-->
 	<script type="text/javascript" src="scripts/image_display.js"></script>
-	<script type="text/javascript" src="scripts/tree_visualization.js"></script>
 	<script type="text/javascript" src="scripts/accidents_all.js"></script>
 	<script type="text/javascript" src="scripts/deaths_all.js"></script>
+	<script type="text/javascript" src="scripts/geo_nyc.js"></script>
+	<!--<script type="text/javascript" src="scripts/tree_visualization.js"></script>-->
 </html>
