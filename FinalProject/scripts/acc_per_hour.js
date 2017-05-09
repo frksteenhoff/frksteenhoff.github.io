@@ -1,11 +1,11 @@
 // ------------------------------------------------------------------------ //
 // Global variables
 // ------------------------------------------------------------------------ //
-var max_all    = 0,  // all time max num of accidents
+var max_     = 0,  // all time max num of accidents
     borough  = ["BRONX", "BROOKLYN", "MANHATTAN", "QUEENS", "STATEN ISLAND"],
     colors   = ["darkgreen", "red", "darkorange", "blue", "purple"];  
     /* Margin and padding */
-    margin_  = {top: 40, right: 50, bottom: 100, left: 50},
+    margin_  = {top: 40, right: 50, bottom: 100, left: 100},
     w1       = 1000 - margin_.left - margin_.right,
     h1       = 600 - margin_.top - margin_.bottom;
 var bar_dataset;  // Initializing dataset
@@ -22,8 +22,8 @@ d3.json("data/hour_data.json", function(data) {
 	/* Find largest values within all boroughs */
 	for (var i = 0; i < borough.length; i++) {
 		max_y = d3.max(Object.values(bar_dataset[borough[i]]));
-		if(max_y > max_all) {
-			max_all = max_y;
+		if(max_y > max_) {
+			max_ = max_y;
 		}
 	}
 	/* Variables needed in subsequent part of script */
@@ -37,7 +37,7 @@ var xScale_bar = d3.scale.ordinal()
 				.rangeRoundBands([0, w1], 0.05);
 
 var yScale_bar = d3.scale.linear()
-				.domain([0, max_all])
+				.domain([0, max_])
 				.range([h1, 0]);
 
 //Define X axis
@@ -108,7 +108,7 @@ svg.append("g")
 //Create Y axis
 svg.append("g")
 	.attr("class", "y axis")
-	.call(yAxis_bar );
+	.call(yAxis_bar);
 
 // Add plot title
 svg.append("text")
