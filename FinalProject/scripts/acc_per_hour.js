@@ -50,7 +50,7 @@ var xAxis_bar  = d3.svg.axis()
 var yAxis_bar  = d3.svg.axis()
 			  .scale(yScale_bar)
 			  .orient("left")
-			  .ticks(1);
+			  .ticks(10);
 
 //Create SVG element
 var svg = d3.select("#acc_all")

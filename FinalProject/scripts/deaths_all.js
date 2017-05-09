@@ -19,12 +19,12 @@ var yScale_small = d3.scale.linear()
 				.range([h2, 0]);
 
 //Define X axis
-var xAxis = d3.svg.axis()
+var xAxis_ = d3.svg.axis()
 			  .scale(xScale_small)
 			  .orient("bottom");
 
 //Define Y axis
-var yAxis = d3.svg.axis()
+var yAxis_ = d3.svg.axis()
 			  .scale(yScale_small)
 			  .orient("left");
 
@@ -69,8 +69,8 @@ svg.selectAll("rect")
 			.attr("fill", "orange")
 		svg.append("text")
 		   .attr("id", "tooltip")
-		   .attr("x", -100)
-		   .attr("y", w2-30)
+		   .attr("x", h2)
+		   .attr("y", w2)
 		   .attr("font-family", "sans-serif")
 		   .attr("font-size", "12px")
 		   .attr("font-weight", "bold")
@@ -89,7 +89,7 @@ svg.selectAll("rect")
 svg.append("g")
 	.attr("class", "x axis")
 	.attr("transform", "translate(0," + h2 + ")")
-	.call(xAxis)
+	.call(xAxis_)
 	.selectAll("text")
 	.style("text-anchor", "end")
 		.attr("dx", "-1.0em")
@@ -100,7 +100,7 @@ svg.append("g")
 //Create Y axis
 svg.append("g")
 	.attr("class", "y axis")
-	.call(yAxis);
+	.call(yAxis_);
 
 // Add plot title
 svg.append("text")
