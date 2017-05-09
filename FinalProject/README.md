@@ -11,20 +11,15 @@ The visualizations are made using d3 on data from New York City Motor Vehicle Co
 * **Stylesheets** - contains the .css file with styling elements for the webpage
 * **d3** - d3 files for visualizations  
 * **images** - images used on webpage
+* **data** - all datastructures used on webpage by scripts
 
 ### Data material
 All data material can be found at the root of the folder "FinalProject". 
 * ``index.html`` - webpage source code
-* ``incidents_all.json`` - all incidents per borough per year
-* ``year_data.json`` - Traffic accidents per year in json object
-* ``02806_FinalProject-ExplainerNotebook.ipynb`` - the Notebook Explaining all the "behind the scenes" work with the data.
+* ``02806_FinalProject-ExplainerNotebook.ipynb`` - the Notebook Explaining all the "behind the scenes" work with the data. Hosted on nbviewer.jupyter.org for a better reading experience.
 * ``externalFunctions.py`` - all functions/methods created and used in the Explainer Notebook in order to make the notebook more ledgible.
 
 ## Links
 
 * [The actual webpage](https://frksteenhoff.github.io/FinalProject/index.html)
-* [The associated iPython Notebook](https://github.com/frksteenhoff/frksteenhoff.github.io/blob/a03d1bc2faef936dcc2c14b3917e79b57ec204f0/Assignment2/dataprep.ipynb)
-
-**Need to be updated!**
-
-All of the above is available in this repo.
+* [The associated iPython Notebook](http://nbviewer.jupyter.org/github/frksteenhoff/02806_SDA/blob/master/02806_FinalProject-ExplainerNotebook.ipynb)
