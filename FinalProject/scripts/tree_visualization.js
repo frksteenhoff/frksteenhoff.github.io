@@ -19,7 +19,7 @@ var svg = d3.select("#tree_viz")
   .append("g")
     .attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
 
-d3.json("/data/rules.json", function(error, flare) {
+d3.json("data/rules.json", function(error, flare) {
   if (error) throw error;
 
   root = flare;
