@@ -1,6 +1,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
+   Edited by frksteenhoff, 03-05-2018
 */
 
 html, body, div, span, applet, object, iframe,
@@ -42,11 +43,17 @@ q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
+text {
+  font-size: 12px;
+  font-family: 'Lato', regular;
+  color: #D3D3D3;
+}
 
 .temperature {
   fill: none;
@@ -54,29 +61,26 @@ table {
 }
 
 .temp-probe {
-  stroke: blue;
+  stroke: red;
 }
 
-.ambient {
-  stroke: #C790E3;
-}
 
 .high-threshold {
   fill: none;
-  stroke: red;
+  stroke: grey;
   stroke-width: 1px;
 }
 
 
 .high-threshold {
   fill: none;
-  stroke: red;
+  stroke: grey;
   stroke-width: 1px;
 }
 
 .low-threshold {
   fill: none;
-  stroke: #67A9FF;
+  stroke: grey;
   stroke-width: 1px;
 }
 
