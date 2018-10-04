@@ -1,0 +1,78 @@
+<html>
+<body>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  		<script src="analytics.js"></script>
+	</head>
+	<title>Blog post</title>
+	<div id='menu'><ul>
+  		<li><a href="../index.html">Home</a></li>
+  		<li><a href="../projects.html">Projects</a></li>
+  		<li><a href="../interests.html">Interests</a></li>
+  		<li><a href="../projects2.html">Course work</a></li>
+	</ul>
+	</div>
+	<div class="container">
+  		<div class="jumbotron">
+  		<img class="img-circle" src="../images/android.png" align="right" height="190" width="190"> 
+    	<h1>Android App Development and Testing</h1>		
+ 			<p2>Henriette Steenhoff, October 2018</p2>
+ 			<br></br>
+ 			<p>Ultimo September this year, I published an app called <a href="https://play.google.com/store/apps/details?id=com.climapp.frksteenhoff">ClimApp on Google Play</a>. This is part of the <a href="http://www.jpi-climate.eu/nl/25223441-ClimApp.html">European Research Association For Climate Change (ERA4CS) initiative</a> and is the result of one years work with scientists from several European universities, sponsored by the European Union, trying to personalize how weather conditions affect your ability to work and how to cope in the best possible way to maintain and/or increase your productivity. To read more about the models, functionality and why this is important you can checkout the <a href="https://drive.google.com/open?id=1bw6hidqenzwUIwEMNIMtkzFuDTH6i_ru">scientific paper</a> I wrote documenting the app, otherwise it is all <a href="https://github.com/frkstenhoff/ClimApp">available on GitHub</a></p> 
+
+ 			<p>The project for me has been a special course at The Technical University of Denmark where I have been the lead developer of an app where different physiological and human thermal models have been and will continue to be implemented throughout the project. I have never taken a university course in app development, instead I have followed one of the freely available courses on <a href="https://classroom.udacity.com/courses/ud839">Udacity in Android App Development</a> and with this as my base I have slowly extended my knowledge when needed in relation to this project. I am definitely not an expert, but from this project I have learned a lot about mobile app development in general and especially about testing practices and this is what I would like to share here.</p>
+
+ 			
+ 			<br></br>
+ 			<h4>Setting it all up</h4>
+ 			<p>If you have worked with apps, you know how all this works.</p>
+ 			<p>Missing</p>
+ 			<p>I have found this documentation (<a href="https://developer.android.com/training/permissions/requesting">first</a>, <a href="https://developer.android.com/guide/topics/permissions/overview">second</a>) for checking and requesting app permissions to be really valuable -- generally, I must admit, the documentation provided for Android developers is sublime (and I will rely heavily on these here).</p>
+
+			<br></br>
+			<h4>Testing</h4>
+			<p></p>
+			<p>Android Studio and Google provides a vast variety of ways to test your application. You can do your regular functionality test in JUnit or whatever unit testing environment you like, but what I think is really great for Android apps is how you can set up <a href="https://firebase.google.com/docs/test-lab/android/robo-ux-test">Robo test scripts</a> and run these on multiple devices (both physical and virtual) using the Firebase Pre-launch Reports and Test Lab. This is suuch a powerful tool! On several occasions I have discovered that testing your app on different virtual devices and API levels in the Android Studio emulator returned non-deterministic results or different results from what the actual users experience. By using the test framework that Firebase provide, this will never be a problem. You can setup templates and run through the app in the exact manner you need on the devices your application is targeting -- which streamlines the process and gives you a much better idea of your app's performance before you publish changes to your users. </p>
+
+			<br></br>
+			<h5>Setting up a robo test</h5>
+
+			<h5>Using a custom robo script</h5>
+			
+			<h5>Choosing devices</h5>
+
+			<h5>Looking at the results</h5>
+			<h5>Traversel graph</h5>
+			<h5>Video</h5>
+			<h5>Logcat</h5>
+
+ 			<br></br>
+ 			<h4>Publishing on Google Play</h4>
+ 			<p>The only thing you need in order to publish apps on Google Play (almost) is an <a href="https://support.google.com/googleplay/android-developer/answer/6112435?hl=en">Android Developer</a> account and pay a one-time fee of $25 USD. Hereafter you can start adding projects, app descriptions and making the basic setup for your app. For many of the tasks you go through in order to make the app ready to be published, a designer might come in handy as you need promotional material. Icons, background banners and descriptions are all required in order to publish and if you, as me, don't really have that skillset .. well then getting someone to help out with that is a good idea.</p>  
+
+ 			<p>After having published your app, the Google Developer Console will become your best friend. Here you get the full overview of devices on different version of your app, crash reports (and stack trace), overview of the different version of phones .. you name it. I have used all these details heavily when supporting users and to get an idea of the app stability, it really provides everything you need.</p>
+
+			<br></br>
+			<h4>Other</h4> 			
+			<br></br>
+			<p>This project really has developed my skills as a developer. Even though there are app development courses at DTU this safe environment for learning  is not the same as having to develop an app based on, initially, rather vague user criteria and having to do the continuous maintenance afterwards, dealing with the hurdles of thorough testing, dealing with changing needs and requirements and keeping the app updated. After a course, you can put your app behind you. You don't need to worry about the compatibility, design for a lot of different devices, it just has to work for your exam, for me I now have people depending on a service and I have to provide the support they need.
+
+
+ 			<br></br>
+ 			<h2>Links</h2>
+ 			<div id='links'><ul>
+  				<li><a href="https://classroom.udacity.com/courses/ud839">Android App Development Basics</a></li>
+  				<li><a href="https://developer.android.com/about/dashboards/">Distribution Dashboards</a></li>
+  				<li><a href="https://developer.android.com/guide/components/activities/activity-lifecycle">Activity Lifecycles</a></li>
+  				<li><a href="https://developer.android.com/guide/components/fragments">Fragment Lifecycles</a></li>
+  				<li><a href="https://firebase.google.com/docs/test-lab/android/test-lab-play?utm_campaign=firebase_launch_testlab_080416&utm_source=Play&utm_medium=console">Firebase Pre-launch Reports</a></li>
+  				<li><a href="https://firebase.google.com/docs/test-lab/android/robo-ux-test">Robo Tests</a></li>  				
+			</ul>
+	</div>
+	</center>
+	</body>
+</html>

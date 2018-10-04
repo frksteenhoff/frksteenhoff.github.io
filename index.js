@@ -20,7 +20,7 @@ console.log("kids age: " + kidsAge + "\n" + "thres_low: " + low_threshold + "\n"
 var parseDate = d3.timeParse("%Y-%m-%d %H:%M:%S");
 // %e space padded day of month
 // %B full month name
-var formatTime = d3.timeFormat("%e/%B");
+var formatTime = d3.timeFormat("%a");
 console.log(parseDate("2017-09-11 18:35:10"))
 
 // set the ranges
@@ -60,7 +60,6 @@ function draw(data, tempdata) {
 
         d.timestamp = parseDate(d.timestamp);
         d.calculated_bgl = +d.calculated_bgl;
-
     });
 
     console.log(data);
@@ -73,6 +72,7 @@ function draw(data, tempdata) {
     x.domain(d3.extent(data, function(d){
         return d.timestamp;
     }));
+    
     y.domain([0, d3.max(data, function(d){
         return Math.max(d.calculated_bgl, max_bgl_value);
     })]);
@@ -104,7 +104,7 @@ function draw(data, tempdata) {
           .attr("transform",
                 "translate(" + (width/2) + " ," + 
                                (height + margin.top + 10) + ")")
-          .style("text-anchor", "middle")
+          .style("text-anchor", "right")
           .text("Time of day");
 
     // add the Y Axis
@@ -115,10 +115,10 @@ function draw(data, tempdata) {
     svg.append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 0 - margin.left)
-        .attr("x",0 - (height / 2))
+        .attr("x", 0 - (height / 2))
         .attr("dy", "1.75em")
-        .style("text-anchor", "middle")
-        .text("Glucose level (mmol/L"); 
+        .style("text-anchor", "top")
+        .text("Glucose level (mmol/L)  "); 
 }
 
 d3.json("temp_data.json",
