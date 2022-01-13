@@ -7,21 +7,15 @@ body {
 }
 
 /* List element settings */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;		
-}
-
 #menu li {
     float: center;
 }
 
 
 /* Link styling */
+div .transbox ul li p a,
 div a {
-    display: block;
+    
     color: #8800ff;
     text-decoration: none;
 }
@@ -42,7 +36,6 @@ li a {
     color: #585858;
     text-align: center;
     font-weight: bold;
-    padding: 10px 26px;
     text-decoration: none;
 }
 
@@ -99,6 +92,7 @@ p2, p3 {
 
 /* Container styling - areas */ 
 div.container{
+    margin-top: 10px;
     width: 1010px;
     padding-bottom: 20px;
 }
@@ -162,10 +156,15 @@ div.transbox p3 {
 
 button#year_toggle,
 div.transbox,  
-div.transbox ul,
 div.transbox h1 {
 	margin-bottom: 20px;
 	padding: 30px;
+}
+
+div.transbox ul {
+    list-style-type: square;
+    padding: 30px;
+    padding-top: 0px;
 }
 
 div.transbox h1 {
