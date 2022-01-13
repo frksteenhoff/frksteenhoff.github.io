@@ -1,0 +1,301 @@
+
+/* set general page settings*/
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+	background-color: white;
+}
+
+/* List element settings */
+#menu li {
+    float: center;
+}
+
+
+/* Link styling */
+div .transbox ul li p a,
+div a {
+    
+    color: #8800ff;
+    text-decoration: none;
+}
+
+div h2 a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+}
+
+div.site-footer {
+    width: 100%;
+    height: 30px;
+}
+ 
+li a {
+    display: block;
+    color: #585858;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#links ul li a {
+    /* float: left; */
+    text-align: left;
+    display: list-item;
+    vertical-align: middle;
+    color: #8800ff;
+}
+
+a:hover:not(.active) {
+    color: black;
+    text-decoration: none;
+}
+
+#menu {
+    font-size: 16px;
+    text-align: center;
+}
+
+#menu li { 
+	display: inline-block; 
+	padding: 20px; 
+}
+
+#menu ul {
+    height: auto;
+    margin: 0px;
+}
+
+/* Font size and styling */
+p,
+h1, 
+h2,
+h3, 
+h4 {
+    color: grey;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p1 {
+	color:grey;
+	font-size: 13px;
+}
+
+p2, p3 {
+	color:grey;
+	font-size: 15px;
+}
+
+/* Container styling - areas */ 
+div.container{
+    margin-top: 10px;
+    width: 1010px;
+    padding-bottom: 20px;
+}
+
+#geo_data path {
+  stroke: #fff;
+}
+
+p a {
+    display: inline;
+}
+
+div.container h3{
+	margin-top: 20px;
+}
+
+div.scriptbox {
+    text-align: center;
+    width: 900px;
+    padding-top: 15px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+div.transbox {
+	margin-top: 0px;
+	background-color: #ffffff;
+	opacity: 0.8;
+	filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+#text, 
+div.transbox p, 
+div.scriptbox p {
+	color: #000000;
+    font-size: 18px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    line-height: 130%;
+}
+
+#rectWork,
+#circleWork, 
+#bars,
+#scatter_circle,
+#count div {
+    padding-bottom: 30px;
+
+}
+
+div.transbox p3 {
+    color: grey;    
+    font-size: 15px;
+}
+
+.buttonk {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+button#year_toggle,
+div.transbox,  
+div.transbox h1 {
+	margin-bottom: 20px;
+	padding: 30px;
+}
+
+div.transbox ul {
+    list-style-type: square;
+    padding: 30px;
+    padding-top: 0px;
+}
+
+div.transbox h1 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+div.transbox h2,
+div.container h2 {
+    font-size: 40px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    font-family: "Courier New", sans-serif;
+    font-weight: normal;
+}
+
+div.container h4 {
+    font-size: 30px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    font-family: "Courier New", sans-serif;
+    font-weight: normal;
+}
+
+
+div.container h5 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    font-family: "Courier New", sans-serif;
+    font-weight: bold;
+}
+
+
+div.transbox h3 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+div.transbox h2,
+div.transbox h3,
+div.transbox ul {
+    color: #000000;
+}
+
+div.container.bar {
+    display: inline-block;
+    width: 15px;
+    height: 75px;
+    background-color: grey;
+    margin-left: 2px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}   
+
+div.jumbotron.img {
+	margin-right: 30px;
+}
+
+/* Button and SVG element styling */
+.img {
+	float: right;
+}
+
+.img-circle {
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.button {
+    background-color: #dbdcdd; /* Grey */
+    border: none;
+    color: white;
+    padding: 70px 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.buttonk,
+button#year_toggle,
+.button_small {
+    background-color: #dbdcdd; /* Grey */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+svg #path:text {
+    color: white;
+}
+
+.buttonk {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+#social,
+#buttons {
+    font-size: 16px;
+    text-align: center;
+}
+
+#buttons li { 
+	display: inline-block; 
+    padding-top: 30px;
+	padding-left: 9.3px;
+    padding-right: 9.3px; 
+}
+
+#social li { 
+	display: inline-block; 
+	padding-top: 30px; 
+    padding-bottom: 30px;
+}
+
+button#year_toggle:hover ,
+button_small:hover,
+buttonk:hover,
+button:hover {
+    background-color: #ffffff;
+}
+
+.buttonk:active,
+button#year_toggle:active,
+.button_small:active { 
+    background-color: #dbdcdd; /* Grey */
+}
