@@ -45,6 +45,14 @@ li a {
     color: #8800ff;
 }
 
+.bookshelf-link {
+	font-weight: bold;
+}
+
+a.nav-link {
+	font-weight: normal;
+}
+
 a:hover:not(.active) {
     color: black;
     text-decoration: none;
@@ -71,7 +79,7 @@ h1,
 h2,
 h3, 
 h4 {
-    color: grey;
+	color: black;
 }
 
 h1 {
@@ -92,7 +100,7 @@ p2, p3 {
 div.container{
     margin-top: 10px;
     width: 1010px;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 #geo_data path {
@@ -124,13 +132,13 @@ div.transbox {
 }
 
 #text, 
-div.transbox p, 
+div.jumbotron p, 
 div.scriptbox p {
 	color: #000000;
     font-size: 18px;
     margin-bottom: 0px;
     padding-bottom: 10px;
-    line-height: 130%;
+    line-height: 150%;
 }
 
 #rectWork,
@@ -154,7 +162,9 @@ div.transbox p3 {
 
 button#year_toggle,
 div.transbox,  
+div.jumbotron,
 div.transbox h1 {
+	border-radius: 0.25rem;
 	margin-bottom: 20px;
 	padding: 30px;
 }
@@ -171,6 +181,7 @@ div.transbox h1 {
 }
 
 div.transbox h2,
+div.jumbotron h2,
 div.container h2 {
     font-size: 40px;
     padding-bottom: 10px;
@@ -220,6 +231,10 @@ div.container.bar {
     margin-bottom: 40px;
     margin-top: 40px;
 }   
+div.container div.jumbotron,
+div.jumbotron {
+	background-color: #C5B4E3;
+}
 
 div.jumbotron.img {
 	margin-right: 30px;

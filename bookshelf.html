@@ -1,65 +1,735 @@
+<!DOCTYPE html>
 <html>
-    <head>
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="../old/stylesheets/style.css">
-		
-		<title>Why not Big Tech?</title>
-	</head>
-	<body>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
- 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-            <a class="navbar-brand" href="/"><img src="../favicon.ico" width="36px" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link" href="./articles.html">Articles</a>
-                </li>
-            </ul>
-            </div>
-        </nav>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./old/stylesheets/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-        <div class="container">
-			<div class="jumbotron">
-                <h1>Books I have rea</h1>
-                <h3>Books to get to know me</h3>
-                <i>Books that consiously have helped shape who I am</i>
-                <div class="transbox">
-                    <i>Coming up!</i>
-                   <!-- <ul>
-                        <li><a href="1-human-productivity.html">When is Human Productivity High Enough?</a></li>
-                        <li><a href="2-work-vs-life">Work vs. Life</a></li>
-                        <li><a href="3-part-time-education">The Case for Part Time Education</a></li>
-                    </ul>-->
-                </div>
-                
-                <h3>Other good books</h3>
-                <div class="transbox">
-                    <i>Coming up!</i>
-                   <!-- <ul>
-                        <li><a href="1-human-productivity.html">When is Human Productivity High Enough?</a></li>
-                        <li><a href="2-work-vs-life">Work vs. Life</a></li>
-                        <li><a href="3-part-time-education">The Case for Part Time Education</a></li>
-                    </ul>-->
-                </div>
+	<title>Bookshelf</title>
+</head>
 
-                <h3>Books on my to-read list</h3>
-                <br/>
-                <div class="transbox">
-                    <i>Coming up!</i>
-                   <!-- <ul>
-                        <li><a href="1-human-productivity.html">When is Human Productivity High Enough?</a></li>
-                        <li><a href="2-work-vs-life">Work vs. Life</a></li>
-                        <li><a href="3-part-time-education">The Case for Part Time Education</a></li>
-                    </ul>-->
-                </div>
-            </div>
-        </div>
-    </body>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+		<a class="navbar-brand" href="/"><img src="favicon.ico" width="36px" /></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+			aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!--<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="./articles/articles.html">Articles</a>
+				</li>
+			</ul>
+		</div>-->
+	</nav>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Books I have read</h1>
+			<br>
+			<div class="transbox">
+				<h3>Books to get to know me</h3>
+				<i>Books that consiously have helped shape who I am and how I see the world.</i>
+				<br></br>
+
+				<div class="accordion" id="accordionExample">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingOne">
+							<button class="accordion-button" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								Personality
+							</button>
+						</h2>
+						<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div class="container">
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s1.qwant.com/thumbr/0x380/9/1/e0466972fb5754fb9534661fb59df3c0df17a6ba2a78acf302b78427199964/9780399165245.jpg?u=https%3A%2F%2Fwww.penguinrandomhouse.co.za%2Fsites%2Fpenguinbooks.co.za%2Ffiles%2Fcover%2F9780399165245.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://theartofliving.com/a-mind-for-numbers-summary/">A Mind
+													For Numbers - Barbara Oakley</a></p>
+											<p><i>A personal story on learning and how to use your brain most optimally.
+													For me, this was a big read at the time because it touched upon so
+													many things that I would ave wished that we were all taught at an
+													earlier age.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s1.qwant.com/thumbr/0x380/9/a/ab4059228f2dc3d749180b69bec1f515ae1affc0ad14b38b40039f06b0f9a2/9781925322811.jpg?u=https%3A%2F%2Fres.cloudinary.com%2Fscribe-publications%2Fimage%2Fupload%2Fw_800%2C%2Fv1551893482%2Fnewcovers%2F9781925322811.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://www.waterstones.com/book/maybe-you-should-talk-to-someone/lori-gottlieb/9781911617044">Maybe
+													You Should Talk to Someone - Lori Gottlieb</a></p>
+											<p><i>Honest stories from a therapist about herself and her patients.</i>
+											</p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s1.qwant.com/thumbr/0x380/9/1/fc21a580e088d2cc8ca853c88013c4f7aa3f8512c1058215491dd616c35f7e/daring-greatly-by-bren-brown.jpg?u=http%3A%2F%2Fstatic2.businessinsider.com%2Fimage%2F5473c02e6da8117d58e278d4-1200%2Fdaring-greatly-by-bren-brown.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://www.waterstones.com/book/daring-greatly/brene-brown/9780241257401">Daring
+													Greatly - Brené Brown</a></p>
+											<p><i>How shame affects our lives and how honesty and daring to be brave can
+													help you live a more fulfilling life.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://assets.thalia.media/img/artikel/b5f25507f75b339a96f33011cd77f1b93ce95d20-00-00.jpeg"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a href="https://www.jennifer-moss.com/books">The
+													Burnout Epidemic - Jennifer Moss</a></p>
+											<p><i>How stress affects us, especially with focus on the 2020 pandemic and
+													what leaders can do to combat it. Stress is a cultural problem, not
+													a person-problem. The descriptions of burnout and especially
+													vulnerable people really resonates with me.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s1.qwant.com/thumbr/0x380/2/0/434a3df2376f90c0f9d419a2f647a0ee2da3bacbc2afb5af253d470f3ac1a2/Invisible%20Women%20by%20Caroline%20Criado%20Perez%3B.jpg?u=https%3A%2F%2Fimg.ebook-hunter.org%2Fimg%2FInvisible%2520Women%2520by%2520Caroline%2520Criado%2520Perez%253B.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://carolinecriadoperez.com/book/invisible-women/">Invisible
+													Women - Carolie Criado Perez</a></p>
+											<p><i>How women have been erased in our society from transportation to jobs
+													and medicine.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s2.qwant.com/thumbr/0x380/e/7/ced25f0f12514d5144a4ed6d7b3199bc0439ff33c8a68f72c58355e5b34f2d/9781784164201.jpg?u=https%3A%2F%2Fcdn2.penguin.com.au%2Fcovers%2Foriginal%2F9781784164201.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://thehumanist.com/magazine/january-february-2020/arts_entertainment/outgrowing-god-a-beginners-guide">Outgrowing
+													God - Richard Dawkins</a></p>
+											<p><i>Why religion is a myth, how we are socialized into believing in it and
+													how evolution disproves it.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s1.qwant.com/thumbr/0x380/a/7/18c544c4db77ea5b06df0edb54c0a3d0fc5b88fd922eb1cb9a98e9e6de0814/men-who-hate-women-9781398504653_xlg.jpg?u=https%3A%2F%2Fd28hgpri8am2if.cloudfront.net%2Fbook_images%2Fonix%2Fcvr9781398504653%2Fmen-who-hate-women-9781398504653_xlg.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://www.waterstones.com/book/men-who-hate-women/laura-bates/9781398504653">Men
+													Who Hate Women - Laura Bates</a></p>
+											<p><i>A terrifying analysis of why men hate women, the reasons they start
+													believing that women are the enemy and what we need to do to prevent
+													this from manifesting.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s2.qwant.com/thumbr/0x380/4/0/a64351e1492dbb96287c10e332e7b4ab6a5c7417209ff49ae858ec518837a7/ODcwOTcwLWJhc2lzOjU1MTEyNjY1.jpg?u=https%3A%2F%2Fwww.aakb.dk%2Fsites%2Fwww.aakb.dk%2Ffiles%2Fstyles%2Fding_primary_large%2Fpublic%2Fting%2Fcovers%2FODcwOTcwLWJhc2lzOjU1MTEyNjY1.jpg%3Fitok%3DpY8l44XK&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://hammelboghandel.dk/kultur/687-argumenter-imod-kvinder-9788793604186.html">Argumenter
+													Mod Kvinder - Birgitte Possin</a></p>
+											<p><i>How women have been, and still are belittled in Danish society.</i>
+											</p>
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s1.qwant.com/thumbr/0x380/3/9/98bdfc888454a42931665cd5c6a0b7270e36218460d9e5a9a854709899f7f2/9781916291447.jpg?u=https%3A%2F%2Fi0.wp.com%2Ftheturnaroundblog.com%2Fwp-content%2Fuploads%2F2021%2F04%2F9781916291447.jpg%3Fw%3D1630%26ssl%3D1&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://www.yousraimran.com/blog/sevennecessarysins">The Seven
+													Necessary Sins for Women and Girls - Mona Eltahawy</a></p>
+											<p><i>How women should seize their power and what needs to be done to break
+													free of patriarchy's sexist and limited view of women.</i></p>
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s2.qwant.com/thumbr/0x380/f/6/683e15f3952f9ed83864fcfe2786d1bc18728df7093809dd30d0d7f5918414/img.jpg?u=https%3A%2F%2Fimages.yourcloudlibrary.com%2Fdelivery%2Fimg%3Ftype%3DDOCUMENTIMAGE%26documentID%3Dxnevhz9%26size%3DORIGINAL&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://www.nytimes.com/2019/10/11/books/review-catch-kill-ronan-farrow-harvey-weinstein.html">Catch
+													and Kill - Ronan Farrow</a></p>
+											<p><i>Taking down Harvey Weinstein. Descriptions of his harassment and abuse
+													of women and how the people around him did everything they could to
+													protect him.</i></p>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingTwo">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Racism
+							</button>
+						</h2>
+						<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div class="container">
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s1.qwant.com/thumbr/0x380/3/5/a752b72ca69a7736684a26126a747f22c3d6c7b7efebe12438745eeec39ee3/9781948226745_p0_v3_s1200x630.jpg?u=http%3A%2F%2Fprodimage.images-bn.com%2Fpimages%2F9781948226745_p0_v3_s1200x630.jpg&q=0&b=1&p=0&a=0		"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://www.independent.co.uk/arts-entertainment/books/white-tears-brown-scars-book-ruby-hamad-feminism-women-colour-b1157978.html">White
+													Tears Brown Scars
+													- Ruby Hamad</a></p>
+											<p><i>How white people' fragility is hurting people of color.</i></p>
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s2.qwant.com/thumbr/0x380/f/1/7214694f31994fae8be9e6d7f678fb388a6ae0eb51d8852b42bc3446bc6ab1/1934493179.jpg?u=https%3A%2F%2Fs3.amazonaws.com%2Fimages.ecwid.com%2Fimages%2F17635360%2F1934493179.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://en.wikipedia.org/wiki/Algorithms_of_Oppression">Algorithms
+													of Opression - Safyia Noble</a></p>
+											<p><i>How algorithms, with specific focus on Google's search engine
+													undermine democracy and expose all the bias in society towards
+													non-whites, especially towards women of color.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s1.qwant.com/thumbr/0x380/2/6/9ec7e48c20c860bbcf26f56845c69ef8463d0942fe4e053193f4c4e1b77563/9781914240041.jpg?u=https%3A%2F%2Fblackwells.co.uk%2Fjacket%2Fl%2F9781914240041.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a href="https://www.ajabarber.com/book">Consumed
+													- Aja Barber</a></p>
+											<p><i>Fast Fashion, colonialism, capitalism, racism, fatphobia and how the
+													white west set up supply chains that is ruining the world.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s2.qwant.com/thumbr/0x0/d/b/9fde43115493deab66228048a98b845d08c1c852b5ba7b816972a8c75160bc/41F5W4TN5FL._SY344_BO1,204,203,200_.jpg?u=http%3A%2F%2Fecx.images-amazon.com%2Fimages%2FI%2F41F5W4TN5FL._SY344_BO1%2C204%2C203%2C200_.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://globalsocialtheory.org/concepts/the-racial-contract/">The
+													Racial Contract - Charles W. Mills</a></p>
+											<p><i>A description of the racial contract white westerners made on behalf
+													of the rest of the world.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s2.qwant.com/thumbr/0x380/c/2/0a94a3a509aa5831475651fa5a66a616f65fbf749549b138119ae25630106b/095223-1020x1581.jpg?u=https%3A%2F%2Fstatic.seattletimes.com%2Fwp-content%2Fuploads%2F2020%2F11%2F095223-1020x1581.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://www.nytimes.com/2020/12/01/books/review/mediocre-ijeoma-oluo.html">Mediocre
+													- Ijeoma Oluo</a></p>
+											<p><i>A description and critiscm of the mediocre white man.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s1.qwant.com/thumbr/0x380/b/1/f5d25b74a1fc2d77fd50ccc3f969d07b99220b630bff00db01460ec7c79154/9781408870587.jpg?u=https%3A%2F%2Fwww.jarrold.co.uk%2Fuserdata%2Froot%2Fimages%2Fproducts-temp%2Fbooks%2F9781408870587.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://www.theguardian.com/world/2017/may/30/why-im-no-longer-talking-to-white-people-about-race">Why
+													I'm No Logner Talk to White People About Race - Robin Diangelo</a>
+											</p>
+											<p><i>A hard-hitting description of how hard it can be to talk to fragile
+													white people about race and racism. How racism is rooted in
+													colonialism and slavery and how it looks in the UK today. A guide
+													for white people on how to treat everyone with respect -- 'cause
+													clearly, we are not capable of that.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s2.qwant.com/thumbr/0x380/5/a/37759597f3c9211b482b12139137520e0926756952355ceaa621d0190a3494/White-Fragility-whole-cover.jpg?u=https%3A%2F%2Frcnv.org%2Fwp-content%2Fuploads%2F2019%2F09%2FWhite-Fragility-whole-cover.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://emu.edu/dei/docs/White-Fragility.pdf">White Fragility
+													- Robin Diangelo</a></p>
+											<p><i>A white woman trying to explain how we as white people do racist
+													things, even when we believe ourselves to be "good people". Many
+													examples and good explanations. Diangelo has gotten , justified,
+													criticism for using her whiteness to earn money off of black people
+													(without paying back).</i></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingThree">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								Technology
+							</button>
+						</h2>
+						<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div class="container">
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s2.qwant.com/thumbr/0x380/4/d/6abf7d4a0175e9cb27e17846f8cf5734ed18a294e8d86898adfe78e5381528/9781787634046.jpg?u=https%3A%2F%2Fcdn2.penguin.com.au%2Fcovers%2Foriginal%2F9781787634046.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://www.penguin.com.au/books/privacy-is-power-9780552177719">Privacy
+													is Power - Clarissa Véliz</a></p>
+											<p><i>An insight into how we are surveilled on a daily basis and what we, as
+													a society through legislation and as individuals to limit spying
+													eyes' access.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s2.qwant.com/thumbr/0x380/7/4/ec385711fe60fa11d1b22e17e7ff20fcc86c7f9029b74717e599a06b21fced/9781781256848.jpg?u=https%3A%2F%2Fblackwells.co.uk%2Fjacket%2Fl%2F9781781256848.jpg&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://en.wikipedia.org/wiki/The_Age_of_Surveillance_Capitalism">The
+													Age of Surveillance Capitalism - Shoshana Zuboff</a></p>
+											<p><i>A description of the business model of Big Tech, how it was allowed in
+													the first place and all things that makes it wrong today.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s2.qwant.com/thumbr/0x380/6/2/b7a4761724c52de7351d50509a45678fca8f974cf1b0d3bce5c24d25879b0e/%3Fcollid%3Dbooks_covers_0%26isbn%3D9780262537018%26type%3D.jpg?u=https%3A%2F%2Fmitpress.mit.edu%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Flarge_book_cover%2Fhttp%2Fmitp-content-server.mit.edu%3A18180%2Fbooks%2Fcovers%2Fcover%2F%253Fcollid%253Dbooks_covers_0%2526isbn%253D9780262537018%2526type%253D.jpg%3Fitok%3DWcxeDtIw&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://en.wikipedia.org/wiki/Artificial_Unintelligence:_How_Computers_Misunderstand_the_World">Artificial
+													Unintelligence - Meredith Broussard</a></p>
+											<p><i>How machines are not going to save us. And why blind trust in
+													technology is problematic at best.</i></p>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-auto">
+											<img src="https://s2.qwant.com/thumbr/0x380/f/4/60547002e852ba9e8758d42e23b0f83317069676ac29da169a0abb2774d221/ZUCKED-Cover.jpg?u=https%3A%2F%2Fi1.wp.com%2Fwww.mercurynews.com%2Fwp-content%2Fuploads%2F2019%2F02%2FZUCKED-Cover.jpg%3Ffit%3D620%252C9999px%26ssl%3D1&q=0&b=1&p=0&a=0"
+												width="100">
+										</div>
+										<div class="col" style="margin-right: 8rem;">
+											<p class="bookshelf-link"><a
+													href="https://www.penguinrandomhouse.com/books/598206/zucked-by-roger-mcnamee/">Zucked
+													- Roger McNamee</a></p>
+											<p><i>How Roger McNamee went from Facebook VC to activist against Big
+													Tech.</i></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingFour">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								Economy
+							</button>
+						</h2>
+						<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div class="row mb-3">
+									<div class="col-auto">
+										<img src="https://s1.qwant.com/thumbr/0x380/8/9/17704a53dcb55d2de37a14b038291546eedeb8308c6a852c2f41d03dc72180/%7BF2D81325-A8B8-4C34-82B5-19A08E752ED8%7DImg400.jpg?u=https%3A%2F%2Fimg1.od-cdn.com%2FImageType-400%2F5054-1%2FF2D%2F813%2F25%2F%257BF2D81325-A8B8-4C34-82B5-19A08E752ED8%257DImg400.jpg&q=0&b=1&p=0&a=0"
+											width="100">
+									</div>
+									<div class="col" style="margin-right: 8rem;">
+										<p class="bookshelf-link"><a
+												href="https://en.wikipedia.org/wiki/Bullshit_Jobs#:~:text=Bullshit%20Jobs%3A%20A%20Theory%20is,associates%20work%20with%20self%2Dworth.">Bullshit
+												Jobs - David Graeber</a></p>
+										<p><i>One of the most important books I have ever read on life and work. How we
+												pretend to work to feel like we have earned a fair living and how
+												are lives are defined by our jobs. Are we really working to live or
+												living to work?</i></p>
+									</div>
+								</div>
+								<div class="row mb-3">
+									<div class="col-auto">
+										<img src="https://s1.qwant.com/thumbr/0x380/9/a/fae996421a852a731942c1f1cf7de4d728b771d0c9ffb36e32e77ec3ec3331/1*vg3YBZbNcRewo94voEyt5w.jpeg?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F800%2F1*vg3YBZbNcRewo94voEyt5w.jpeg&q=0&b=1&p=0&a=0"
+											width="100">
+									</div>
+									<div class="col" style="margin-right: 8rem;">
+										<p class="bookshelf-link"><a href="https://doughnuteconomics.org/">Doughnut
+												Economics - Kate Raworth</a></p>
+										<p><i>How we can move from a highly exploitative, unequal and capitalist economy
+												based on pseudo-science and strong beliefs in "the market" - to a
+												regenerative and fair economy that focuses on redistribution and
+												sustainability.</i></p>
+									</div>
+								</div>
+								<div class="row mb-3">
+									<div class="col-auto">
+										<img src="https://s2.qwant.com/thumbr/0x380/4/2/543dc91936be17b7fe6696d1ed85c309a6d44521dd2432018a77edccd43ec9/hbg-title-9781529352542-35.jpg?u=https%3A%2F%2Fwww.johnmurraypress.co.uk%2Fwp-content%2Fuploads%2F2020%2F01%2Fhbg-title-9781529352542-35.jpg%3Ffit%3D1843%252C2835&q=0&b=1&p=0&a=0"
+											width="100">
+									</div>
+									<div class="col" style="margin-right: 8rem;">
+										<p class="bookshelf-link"><a
+												href="https://www.milkenreview.org/articles/the-deficit-myth">The
+												Deficit Myth - Stephanie Kelton</a></p>
+										<p><i>What you learn classical economy to be, how many of the underlying
+												theories are wrong (but used by politicians to stay in power) and how we
+												can make the economy work for us and not the rich. The economy of
+												governments is not the same as household economies and a deficit in
+												public finances is good for its citizens and corporations.
+												Ground-breaking writing!</i></p>
+									</div>
+								</div>
+								<div class="row mb-3">
+									<div class="col-auto">
+										<img src="https://s2.qwant.com/thumbr/0x380/f/9/71b31b8b757046e5e5e0e9c981dbc035050cc531b21b15cb4c27a3a7cb3ec9/600.jpg?u=https%3A%2F%2Fbookshelf.ca%2Fi%2Fsize%2Fo%2Fproduct_images--8--9780063046238%2Fw%2F600&q=0&b=1&p=0&a=0"
+											width="100">
+									</div>
+									<div class="col" style="margin-right: 8rem;">
+										<p class="bookshelf-link"><a
+												href="https://www.theguardian.com/books/2021/jan/20/mission-economy-by-mariana-mazzucato-review-the-return-of-the-state">Mission
+												Economy - Mariana Mazzucato</a></p>
+										<p><i>How the power of governments have been limited to fixing "the market" and
+												how we should change it back so that governments can take the active
+												role in our society that it needs to in order for its people to prosper
+												and live more equally. How governments should control rather than be
+												controlled and how we should start focusing on having competencies
+												within governments rather than outsourcing to exploitative
+												consultancies.</i></p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- use this for new entries
+				<div class="row mb-3">
+					<div class="col-auto">
+						<img src="" width="100">
+					</div>
+						<div class="col" style="margin-right: 8rem;">
+						<p class="bookshelf-link"><a href="">Title - Author</a></p>
+						<p><i>Description</i></p>
+					</div>
+				</div>
+				-->
+				<br>
+				<h3>Other good books</h3>
+				<div class="transbox">
+					<div class="row mb-3">
+						<div class="col-auto">
+							<img src="https://s2.qwant.com/thumbr/0x380/5/7/1f2788d9a86f6786a81144b449306379c7f7d256f0c1bacc176bc55f2724b0/_9781847924759.jpg?u=https%3A%2F%2Fimgcdn.saxo.com%2F_9781847924759&q=0&b=1&p=0&a=0"
+								width="100">
+						</div>
+						<div class="col" style="margin-right: 8rem;">
+							<p class="bookshelf-link"><a
+									href="https://www.theguardian.com/books/2019/mar/05/the-gendered-brain-gina-rippon-review">The
+									Gendered Brain - Gina Rippon</a></p>
+							<p><i>How men throughout history have tried to weaponize science against women and use
+									pseudo-science as arguments as to why they are the superior sex. How gendering is
+									limiting our prsonal development and what we should do to change it.</i></p>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-auto">
+							<img src="https://s1.qwant.com/thumbr/0x380/8/3/627c416596308f1af2620379a3cbdbc3664eb510bf9ed6744d0d2949668739/8c6e4c3a926dfd4de3a95f240b84ac4bdc-29-reshma-saujani-book.w710.jpg?u=https%3A%2F%2Fpyxis.nymag.com%2Fv1%2Fimgs%2Fa86%2F8d4%2F8c6e4c3a926dfd4de3a95f240b84ac4bdc-29-reshma-saujani-book.w710.jpg&q=0&b=1&p=0&a=0"
+								width="100">
+						</div>
+						<div class="col" style="margin-right: 8rem;">
+							<p class="bookshelf-link"><a
+									href="https://booksummaryclub.com/brave-not-perfect-summary/">Brave Not Perfect -
+									Reshma Saujani</a></p>
+							<p><i>Strive to try, not to do things perfect. Being authentic leads us on the right
+									path.</i></p>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-auto">
+							<img src="https://s1.qwant.com/thumbr/0x380/9/6/d36774898c736194e1d0567d6829403da71ed92da4824bc6ce9b97d0b797ad/Howes-Mask-of-Masculinity.jpg?u=https%3A%2F%2Fmindgourmet.com%2Fwp-content%2Fuploads%2F2017%2F12%2FHowes-Mask-of-Masculinity.jpg&q=0&b=1&p=0&a=0"
+								width="100">
+						</div>
+						<div class="col" style="margin-right: 8rem;">
+							<p class="bookshelf-link"><a href="https://www.maskofmasculinity.com/">The Mask of
+									Masculinity - Lewis Howes</a></p>
+							<p><i>How men are limited by harmful stereotypes and ideas about how to be "a real man" and
+									how to unlearn unhealthy patterns.</i></p>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-auto">
+							<img src="" width="100">
+						</div>
+						<div class="col" style="margin-right: 8rem;">
+							<p class="bookshelf-link"><a href="">Lean In - Sheryl Sandberg</a></p>
+							<p><i>White feminism with a strong focus on making women lean in to have a seat at the
+									table. More focus on individual work than structural issues. Often, however
+									well-meaning, in a very self-centered lens.</i></p>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-auto">
+							<img src="https://s1.qwant.com/thumbr/0x380/a/1/fbd3688a24f1d575cc161d05d1c6d67c2b9e463fb0da8d452663348b407bc7/9780593211618.jpg?u=https%3A%2F%2Fimages.penguinrandomhouse.com%2Fcover%2F700jpg%2F9780593211618&q=0&b=1&p=0&a=0"
+								width="100">
+						</div>
+						<div class="col" style="margin-right: 8rem;">
+							<p class="bookshelf-link"><a href="https://micheleharper.com/the-beauty-in-breaking/">The
+									Beauty in Breaking - Michele Harper</a></p>
+							<p><i>The stories of Michele Harper, an emergency room physician.</i></p>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-auto">
+							<img src="https://s1.qwant.com/thumbr/0x380/3/d/83a56cb45e89d33c87e9c98cf3ab4848ea48c6cf7db4f96e47dd5a3011c551/Subtle-Art-1.jpg?u=https%3A%2F%2Fwww.entertainerbuff.com%2Fwp-content%2Fuploads%2F2020%2F02%2FSubtle-Art-1.jpg&q=0&b=1&p=0&a=0"
+								width="100">
+						</div>
+						<div class="col" style="margin-right: 8rem;">
+							<p class="bookshelf-link"><a href="https://markmanson.net/books/subtle-art">The Sublte Art
+									of Not Giving a Fuck - Mark Manson</a></p>
+							<p><i>How to stop caring so much about what others think and live the life you want to
+									live.</i></p>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-auto">
+							<img src="https://s1.qwant.com/thumbr/0x380/1/0/5eea4baf2f34f9293670956bff0774bf19448b5fdc3009369a7bf0dce7b6f7/End_of_Faith.jpg?u=http%3A%2F%2Fbackyardskeptics.com%2Fwordpress%2Fwp-content%2Fuploads%2F2011%2F12%2FEnd_of_Faith.jpg&q=0&b=1&p=0&a=0"
+								width="100">
+						</div>
+						<div class="col" style="margin-right: 8rem;">
+							<p class="bookshelf-link"><a href="https://en.wikipedia.org/wiki/The_End_of_Faith">The End
+									of Faith - Sam Harris</a></p>
+							<p><i>Thoughts about religion and how a world without it could look. Why religion can be
+									dangerous and how it creates more problems that it solves. I like the book, however,
+									it seems like Sam Harris is a part of the "Jordan-Peterson-is-a-good-guy-club" which
+									makes me questions him as a person.</i></p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+			<h1>Books on my to-read list</h1>
+			<br />
+			<div class="transbox">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Title</th>
+							<th scope="col">Author</th>
+							<th scope="col">Comment</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>Data Feminism</td>
+							<td>Catherine D'Ignazio</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>How Europe Underdeveloped Africa</td>
+							<td>Walter Rodney</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>The Case for a Job Guarantee</td>
+							<td>Pavlina R. Tcherneva</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">4</th>
+							<td>Capiital</td>
+							<td>Karl Marx</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">5</th>
+							<td>The Trusted Advisor</td>
+							<td>-</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">6</th>
+							<td>Surrounded by Idiots</td>
+							<td>Thomas Erikson</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">7</th>
+							<td>Why Are All The Black Kids Sitting Together in the Cafeteria?</td>
+							<td>Beverly Daniel Tatum</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">8</th>
+							<td>Sapiens</td>
+							<td>Yuval Noah Harari</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">9</th>
+							<td>F-ordet</td>
+							<td>Sanne Søndergaard</td>
+							<td>Danish feminism</td>
+						</tr>
+						<tr>
+							<th scope="row">10</th>
+							<td>Pseudorbejde</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">11</th>
+							<td>Think Again</td>
+							<td>Adam Grant</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">12</th>
+							<td>Programmed Inequality</td>
+							<td>Mar</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">13</th>
+							<td>Fædre</td>
+							<td>Aydin Soei</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">14</th>
+							<td>Fight Like A Girl</td>
+							<td>Clementine Ford</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">15</th>
+							<td>Thinking Fast and Slow</td>
+							<td>Daniel Kahneman</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">16</th>
+							<td>The Ministry of the Future</td>
+							<td>Kim Stanley Robinson</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">17</th>
+							<td>A Brief History of Time</td>
+							<td>Stephen Hawking</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">18</th>
+							<td>Less is More</td>
+							<td>Jason Hickel</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">19</th>
+							<td>Happy Fat</td>
+							<td>Sofie Hagen</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">20</th>
+							<td>1984</td>
+							<td>George Orwell</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">21</th>
+							<td>21 Things They Don't Tell You About Capitalism</td>
+							<td>Ha-Joon Chang</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">22</th>
+							<td>The Uninhabitable Earth</td>
+							<td>David Wallace-Wells</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">23</th>
+							<td>Atlas of AI</td>
+							<td>Kate Crawford</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">24</th>
+							<td>The Phoenix Project</td>
+							<td>Gene Kim</td>
+							<td></td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+
 </html>
