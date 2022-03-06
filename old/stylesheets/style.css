@@ -2,7 +2,7 @@
 /* set general page settings*/
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 28px;
+    font-size: 20px;
 	background-color: white;
 }
 
@@ -15,7 +15,6 @@ body {
 /* Link styling */
 div .transbox ul li p a,
 div a {
-    
     color: #8800ff;
     text-decoration: none;
 }
@@ -34,7 +33,6 @@ div.site-footer {
 li a {
     display: block;
     color: #585858;
-    text-align: center;
     font-weight: bold;
     text-decoration: none;
 }
@@ -77,7 +75,7 @@ h4 {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 3.5rem;
 }
 
 p1 {
@@ -197,7 +195,6 @@ div.container h5 {
     font-weight: bold;
 }
 
-
 div.transbox h3 {
     font-size: 20px;
     padding-bottom: 10px;
@@ -208,6 +205,10 @@ div.transbox h2,
 div.transbox h3,
 div.transbox ul {
     color: #000000;
+}
+
+div.transbox ul {
+    padding-bottom: 0;
 }
 
 div.container.bar {
